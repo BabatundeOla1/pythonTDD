@@ -3,7 +3,6 @@ import the type of test to be conducted
 create a class to inherit a TestCase
 call the class name and the function name to check if function exist
 use the assertEquals to check if arguement passed is divisible by 5 and returns arguements square root
-check argument passed is a posistive numbers
 use the assertRaises to check argument passed is a type string 
 use the assertRaises to check argument passed is a negative numbers
 """
@@ -29,6 +28,10 @@ class TestDivideOrSquare(unittest.TestCase):
 
 	def test_that_divide_or_square_function_return_error_with_negative_value(self):
 		self.assertRaises(ValueError, divideorsquare.divide_or_square, (-1))
+
+	def test_that_divide_or_square_function_return_error_with_zero_input(self):
+		self.assertEqual(divideorsquare.divide_or_square(0), 0)
+
 	
 
 	

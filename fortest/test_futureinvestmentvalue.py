@@ -16,5 +16,8 @@ class TestFutureInvestmentValue(unittest.TestCase):
 	def test_if_future_investment_value_function_raise_error_with_string_value(self):
 		self.assertRaises(TypeError, futureinvestmentvalue.future_investment_value, "-1", "-5", "-1")
 
-	def test_if_future_investment_value_handles_decimal_value(self):
+	def test_if_future_investment_value_handles_float_value(self):
 		self.assertEqual(futureinvestmentvalue.future_investment_value(1000.5, 10.2, 2.2), 1251.01)
+
+	def test_if_future_investment_value_function_raise_error_with_zero_input(self):
+		self.assertEqual(futureinvestmentvalue.future_investment_value(0, 0, 0), 0)

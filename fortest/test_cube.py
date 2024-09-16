@@ -17,5 +17,4 @@ class TestCube(unittest.TestCase):
 		self.assertRaises(TypeError, cube.get_cube, "byte")
 
 
-#assertEqual is used to check if the parameter passed in the fuction is right
-# assertRaise
+
